@@ -11,9 +11,6 @@ function menutoggle(){
   }
 }
 
-
-
-
 var LoginForm = document.getElementById("LoginForm");
 var RegForm = document.getElementById("RegForm");
 var Indicator = document.getElementById("Indicator");
@@ -30,3 +27,24 @@ function register(){
   Indicator.style.transform = "translateX(100px)";
 }
 
+/*const name =document.getElementById('name');
+const mail =document.getElementById('mail');
+const pass =document.getElementById('pass');
+const cpassword =document.getElementById('cpassword');
+//const mobile=document.getElementById('mobile');
+
+LoginForm.addEventListener('submit', e => {
+  e.preventDefault();
+  validateInputs();
+});
+
+const setError = (element,message) =>{
+
+}
+
+const validateInputs= () => {
+  const usernameValue = name.value.trim();
+  const emailValue = mail.value.trim();
+  const passwordValue = pass.value.trim();
+  const confirmPassword = cpassword.value.trim();
+};*/
