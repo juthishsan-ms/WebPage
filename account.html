@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
+    <div class="header">
     <div class="container">
         <div class="navbar">
-            <div class="logo">
-                <img src="Images/SVP_logo-removebg-preview.png" width="250px">
+            <div class="logo"> 
+                <img src="Images/SVP_logo-removebg-preview.png" alt="logo" width="250px">
             </div>
             <nav>
                 <ul id="MenuItems">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="product.html">Products</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="account.html">Account</a></li>
                 </ul>
             </nav>
-            <img src="Images/cart.png" width="30px" height="30px">
+            <img src="Images/cart.png" width="30px" height="25px">
+            <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
 
@@ -46,14 +48,53 @@
                 </form>
 
                 <form id="RegForm">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm password">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm password"required>
+                    <input type="text" placeholder="Mobile No"required>
                     <button type="submit" class="btn">Register</button>
                 </form>
 
             </div>
+        </div>
+    </div>
+</div>
+    <!---footer-->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download app for android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="Images/play-store.png">
+                        <img src="Images/app-store.png">
+                    </div>
+                </div>
+                
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">©Copyright 2023 - Sri Venkateshwara Paints | All Rights Reserved | Privacy Policy | Terms & Conditions</p>
         </div>
     </div>
     <script src="script.js"></script>
