@@ -95,6 +95,10 @@ p{
     color: #555;
 }
 
+.error {
+    color: #ff0000;
+    font-weight: bold;
+}
 
 /*-----product page-----*/
 
@@ -120,7 +124,7 @@ select:focus{
 .form-container{
     background-color: #fff;
     width: 300px;
-    height: 400px;
+    height: 500px;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -147,7 +151,7 @@ select:focus{
     transition: transform 1s;
 }
 .form-container #LoginForm{
-    top: 100px;
+    top: 150px;
 }
 form input{
     width: 100%;

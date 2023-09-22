@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Venkateshwara | E-commerce Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
-    <div class="header">
+
+<!--header-->
+
+<div class="header">
     <div class="container">
         <div class="navbar">
             <div class="logo"> 
@@ -49,13 +51,22 @@
 
                 <form id="RegForm">
                     <input id="name" type="text" placeholder="Name" required>
+                    <span id="nameError" class="error"></span>
+                
                     <input id="mail" type="email" placeholder="Email" required>
+                    <span id="emailError" class="error"></span>
+                
                     <input id="pass" type="password" placeholder="Password" required>
-                    <input id="cpassword" type="password" placeholder="Confirm password"required>
-                    <input id="mobile" type="text" placeholder="Mobile No"required>
+                    <span id="passError" class="error"></span>
+                
+                    <input id="cpassword" type="password" placeholder="Confirm password" required>
+                    <span id="cpasswordError" class="error"></span>
+                
+                    <input id="mobile" type="text" placeholder="Mobile No" required>
+                    <span id="mobileError" class="error"></span>
+                
                     <button type="submit" class="btn">Register</button>
                 </form>
-
             </div>
         </div>
     </div>
