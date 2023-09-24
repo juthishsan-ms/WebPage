@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Venkateshwara | E-commerce Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,44 +34,83 @@
 
     <!--account page-->
 
-    <div class="account-page">
-        <div class="container">
-            <div class="form-container">
-                <div class="form-btn">
-                    <span onclick="login()">Login</span>
-                    <span onclick="register()">Register</span>
-                    <hr id="Indicator">
+    <!----------------------------- Form box -----------------------------------> 
+    <div class="wrapper">   
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+        <div class="login-container" id="login">
+            <header>Login</header>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username or Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
                 </div>
-
-                <form id="LoginForm">
-                    <input id="email" type="email" placeholder="Username/Email" required>
-                    <input id="password" type="password" placeholder="Pasaword" required>
-                    <button type="submit" class="btn">Login</button>
-                    <a href="">Forgot password?</a>
-                </form>
-
-                <form id="RegForm">
-                    <input id="name" type="text" placeholder="Name" required>
-                    <span id="nameError" class="error"></span>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                 
-                    <input id="mail" type="email" placeholder="Email" required>
-                    <span id="emailError" class="error"></span>
+            </div>
+        </div>
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <header>Sign Up</header>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Mobile No">
+                <i class="bx bx-phone"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
                 
-                    <input id="pass" type="password" placeholder="Password" required>
-                    <span id="passError" class="error"></span>
-                
-                    <input id="cpassword" type="password" placeholder="Confirm password" required>
-                    <span id="cpasswordError" class="error"></span>
-                
-                    <input id="mobile" type="text" placeholder="Mobile No" required>
-                    <span id="mobileError" class="error"></span>
-                
-                    <button type="submit" class="btn">Register</button>
-                </form>
             </div>
         </div>
     </div>
-</div>
+    </div>
+</div>  
 
     <!---footer-->
 
