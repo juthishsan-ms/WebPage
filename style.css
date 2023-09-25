@@ -113,6 +113,9 @@ select{
 select:focus{
     outline: none;
 }
+.col-3{
+    padding-bottom: 50px;
+}
 
 /*-----account page-----
 .account-page{
