@@ -322,8 +322,8 @@ ul{
     z-index: 2;
 }
 .login-container{
-    position: absolute;
-    left: 4px;
+    position: relative;
+    left: 250px;
     height: 500px;
     width: 500px;
     display: flex;
@@ -331,7 +331,7 @@ ul{
     transition: .5s ease-in-out;
 }
 .register-container{
-    position: absolute;
+    position: relative;
     right: -520px;
     height: 600px;
     width: 500px;
@@ -437,4 +437,11 @@ header{
         flex-direction: column;
         gap: 0;
     }
+}
+
+/*----error----*/
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
