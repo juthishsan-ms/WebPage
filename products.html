@@ -1,116 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Venkateshwara | Ecommerce Website</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .product img{
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+
+        #Featured > div:nth-child(4) > nav > ul > li.page-item.active > a{
+            background-color: black;
+        }
+
+        #Featured > div:nth-child(4) > nav > ul > li:nth-child(n):hover>a{
+            background-color: coral;
+            color: #fff;
+        }
+
+        .pagination a{
+            color: #000;
+        }
+    </style>
+
+
 </head>
+
 <body>
 
-    <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <div class="navbar">
-                <div class="logo"> 
-                    <img src="Images/SVP_logo-removebg-preview.png" alt="logo" width="250px">
+            <img src="Images/SVP logo 2.png" alt="logo" width="200px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i id="bar" class="fa fa-bars" aria-hidden="true"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="account.html"><i class="fa fa-user" aria-hidden="true"></i>Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </li>
+
+            </div>
+        </div>
+    </nav>
+
+    <section id="Featured" class="my-5 py-5">
+        <div class="container mt-5 py-5">
+            <h2 class="font-weight-bold">Our Featured Products</h2>
+            <hr>
+            <p>Here you can check our new products with fair price</p>
+        </div>
+        <div class="row mx-auto container">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Royale Luxury Emulsion</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/2-.-Tractor-Emulsionnew-300x300.jpg" alt="">
+                <h5 class="p-name">Tractor Emulsion</h5>
+                <h4 class="p-price">₹150.00 - ₹2,266.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Apcolite-premium-emulsion-SKU-156-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Apcolite Premium Emulsion</h5>
+                <h4 class="p-price">₹331.00 - ₹6,161.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Dulux-Aqua-Tech-SKU-401-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Aquatech Flexible Waterproof</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="row mx-auto container">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Royale Luxury Emulsion</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/2-.-Tractor-Emulsionnew-300x300.jpg" alt="">
+                <h5 class="p-name">Tractor Emulsion</h5>
+                <h4 class="p-price">₹150.00 - ₹2,266.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Apcolite-premium-emulsion-SKU-156-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Apcolite Premium Emulsion</h5>
+                <h4 class="p-price">₹331.00 - ₹6,161.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Dulux-Aqua-Tech-SKU-401-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Aquatech Flexible Waterproof</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="row mx-auto container">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Royale Luxury Emulsion</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/2-.-Tractor-Emulsionnew-300x300.jpg" alt="">
+                <h5 class="p-name">Tractor Emulsion</h5>
+                <h4 class="p-price">₹150.00 - ₹2,266.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Apcolite-premium-emulsion-SKU-156-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Apcolite Premium Emulsion</h5>
+                <h4 class="p-price">₹331.00 - ₹6,161.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Dulux-Aqua-Tech-SKU-401-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Aquatech Flexible Waterproof</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <nav aria-label="...">
+                <ul class="pagination mt-5">
+                    <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </section>
+
+    <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <img src="Images/logo-removebg-preview.png" alt="" width="60px">
+                <p class="pt-3">We are Sri Venkateshwara paints. We are selling the best quality paints all over
+                    tamilnadu. We have various paint collections.</p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Brands</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="">ASIAN</a></li>
+                    <li><a href="">BERGER</a></li>
+                    <li><a href="">DR.FIXIT</a></li>
+                    <li><a href="">DULUX</a></li>
+                    <li><a href="">JOTUN</a></li>
+                    <li><a href="">NEROLAC</a></li>
+                    <li><a href="">ROFF</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Products</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="">INTERIOR PAINTS</a></li>
+                    <li><a href="">EXTERIOR PAINTS</a></li>
+                    <li><a href="">WATERPROOFING</a></li>
+                    <li><a href="">TEXTURE PAINTS</a></li>
+                    <li><a href="">WOOD PAINTS</a></li>
+                    <li><a href="">METAL PAINTS</a></li>
+                    <li><a href="">DIY RANGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Contact Us</h5>
+                <div>
+                    <h6 class="text-uppercase">Address</h6>
+                    <p>136 B, Karur Byepass Road,
+                        Moolappalayam,
+                        Erode - 638002.</p>
                 </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="account.html">Account</a></li>
-                    </ul>
-                </nav>
-                <img src="Images/cart.png" width="30px" height="25px">
-                <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+                <div>
+                    <h6 class="text-uppercase">Contact</h6>
+                    <p>+91 99422 25677
+                        +91 70109 35545</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">E-mail</h6>
+                    <p>venkateshwarapaints3@gmail.com</p>
+                </div>
             </div>
         </div>
 
-        <div class="small-container">
-            <div class="row row-2">
-                <h2>All Products</h2>
-                <select>
-                    <option>Default sort</option>
-                    <option>Sort by price</option>
-                    <option>Sort by popularity</option>
-                    <option>Sort by rating</option>
-                    <option>Sort by sales</option>
-                </select>
-            </div>
-            
-            <div class="row">
-                <div class="col-3">
-                    <img src="Images/9.Royal-Mattnew-600x618.jpg" >
-                    <h4>Royale Luxury Mattnew</h4>
-                    <p>$80.00</p>
-                </div>
-                <div class="col-3">
-                    <img src="Images/3-Mangoes-Black-board-paint-SKU-147-scaled-300x300.jpg" >
-                    <h4>Mangoes Black Board paint</h4>
-                    <p>$60.00</p>
-                </div>
-                <div class="col-3">
-                    <img src="Images/1-Royal-Luxury-Emulsion-scaled-600x668.jpg" >
-                    <h4>Royale Luxury Emulsion</h4>
-                    <p>$50.00</p>
-                </div>
-                <div class="col-3">
-                    <img src="Images/3-Mangoes-Aluminium-Paint-SKU-148-scaled-600x900.jpg" >
-                    <h4>Mangoes Aluminium</h4>
-                    <p>$70.00</p>
-                </div>
-                <div class="col-3">
-                    <img src="Images/Apcolite-Premium-enammel-gloss-SKU-129-scaled-600x900.jpg" >
-                    <h4>Apcolite Premium enammel</h4>
-                    <p>$40.00</p>
-                </div>
-                <div class="col-3">
-                    <img src="Images/TRACTOR-UNO-Acrylic-Distemper-600x772.jpg" >
-                    <h4>Tractor uno</h4>
-                    <p>$60.00</p>
+        <div class="copyright mt-5">
+            <div class="row container mx-auto">
+                <div class="col-lg-4 col-md-6 col-12 mb-2 text-nowrap">
+                    <p>© Copyright 2023.Venkateshwarapaints.com. All Rights Reserved | Privacy Policy | Terms &
+                        Conditions | Shipping Policy | Return | Refund | Cancellation Policy</p>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!---footer-->
-        
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Download Our App</h3>
-                        <p>Download app for android and ios mobile phone</p>
-                        <div class="app-logo">
-                            <img src="Images/play-store.png">
-                            <img src="Images/app-store.png">
-                        </div>
-                    </div>
-                    
-                    <div class="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow us</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Youtube</li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <p class="copyright">©Copyright 2023 - Sri Venkateshwara Paints | All Rights Reserved | Privacy Policy | Terms & Conditions</p>
-            </div>
-        </div>
-        <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>

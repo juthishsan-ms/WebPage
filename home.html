@@ -1,128 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Venkateshwara | Ecommerce Website</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <div class="navbar">
-                <div class="logo"> 
-                    <img src="Images/SVP_logo-removebg-preview.png" alt="logo" width="250px">
-                </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="account.html">Account</a></li>
-                    </ul>
-                </nav>
-                <img src="Images/cart.png" width="30px" height="25px">
-                <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+            <img src="Images/SVP logo 2.png" alt="logo" width="200px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i id="bar" class="fa fa-bars" aria-hidden="true"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="account.html"><i class="fa fa-user" aria-hidden="true"></i>Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </li>
+
             </div>
-            <div class="row">
-                <div class="col-2">
-                    <h1>Welcome to Sri Venkateshwara Paints <br> Your Online Paint Store</h1>
-                    <p>Get your favorite paint delivered to your doorstep.</p>
-                    <a href="product.html" class="btn">Explore Now &#8594;</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <h2> <span>Welcome to Sri Venkateshwara Paints</span> <br> Your Online Paint Store</h2>
+            <p>Get your favorite paint delivered to your doorstep.</p>
+            <button>Explore Now</button>
+        </div>
+    </section>
+
+    <section id="brand" class="container">
+        <div class="row m-0 py-5">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
+            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
+        </div>
+    </section>
+
+    <section id="new" class="w-100">
+        <div class="row p-0 m-0">
+            <div class="one col-lg-4 col-md-12 col-12 p-0">
+                <img class="img-fluid" src="Images/interior.png" alt="">
+                <div class="details">
+                    <h2>Interior Paints</h2>
+                    <button class="text-uppercase">Shop now</button>
                 </div>
-                <div class="col-2">
-                    <img src="Images/paint image1.jpg">
+            </div>
+            <div class="one col-lg-4 col-md-12 col-12 p-0">
+                <img class="img-fluid" src="Images/exterior.png" alt="">
+                <div class="details">
+                    <h2>Exterior Paints</h2>
+                    <button class="text-uppercase">Shop now</button>
+                </div>
+            </div>
+            <div class="one col-lg-4 col-md-12 col-12 p-0">
+                <img class="img-fluid" src="Images/Wood.png" alt="">
+                <div class="details">
+                    <h2>Wood Paints</h2>
+                    <button class="text-uppercase">Shop now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Featured" class="my-5 pb-5">
+        <div class="container text-center mt-5 py-5">
+            <h3>Our Featured Products</h3>
+            <hr class="mx-auto">
+            <p>Here you can check our new products with fair price</p>
+        </div>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Royale Luxury Emulsion</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/2-.-Tractor-Emulsionnew-300x300.jpg" alt="">
+                <h5 class="p-name">Tractor Emulsion</h5>
+                <h4 class="p-price">₹150.00 - ₹2,266.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Apcolite-premium-emulsion-SKU-156-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Apcolite Premium Emulsion</h5>
+                <h4 class="p-price">₹331.00 - ₹6,161.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Dulux-Aqua-Tech-SKU-401-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Aquatech Flexible Waterproof</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="container text-center mt-5 py-5">
+            <h3>Featured Interior Paints</h3>
+            <hr class="mx-auto">
+            <p>Best Selling Interior Paints</p>
+        </div>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/berger-silk-glamour-paint.1jpg-300x300.jpg" alt="">
+                <h5 class="p-name">Berger Silk Glamor</h5>
+                <h4 class="p-price">₹788.00 - ₹7,500.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/Bison-Acrylic-Distemper-300x300.jpg" alt="">
+                <h5 class="p-name">Berger Bison Acrylic Distemper</h5>
+                <h4 class="p-price">₹168.00 - ₹1,523.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/silk-breathe-easy--300x300.jpg" alt="">
+                <h5 class="p-name">Berger Silk BreatheEasy</h5>
+                <h4 class="p-price">₹578.00 - ₹5,670.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/bison-acrylic-emulsion-300x300.jpg" alt="">
+                <h5 class="p-name">Bison Acrylic Interior Emulsion</h5>
+                <h4 class="p-price">₹210.00 - ₹3,780.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="container text-center mt-5 py-5">
+            <h3>Featured Exterior Paints</h3>
+            <hr class="mx-auto">
+            <p>Best Selling Exterior Paints</p>
+        </div>
+        <div class="row mx-auto container-fluid">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/21.ACE-Exterior-Emulsionnew-600x618.jpg" alt="">
+                <h5 class="p-name">ACE</h5>
+                <h4 class="p-price">₹206.00 – ₹3,597.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/3.-Apex-Exterior-Emulsion-600x668.jpg" alt="">
+                <h5 class="p-name">Apex</h5>
+                <h4 class="p-price">₹347.00 - ₹6,050.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/20.Apex-Floor-Guard-new-600x618.jpg" alt="">
+                <h5 class="p-name">APEX FLOOR GUARD</h5>
+                <h4 class="p-price">₹450.00 - ₹1,716.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/5.Apex-Ultima-Protek-Basecoatnew-600x618.jpg" alt="">
+                <h5 class="p-name">Apex Ultima Protek Basecoat</h5>
+                <h4 class="p-price">₹412.00 - ₹4,246.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <img src="Images/logo-removebg-preview.png" alt="" width="60px">
+                <p class="pt-3">We are Sri Venkateshwara paints. We are selling the best quality paints all over
+                    tamilnadu. We have various paint collections.</p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Brands</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="">ASIAN</a></li>
+                    <li><a href="">BERGER</a></li>
+                    <li><a href="">DR.FIXIT</a></li>
+                    <li><a href="">DULUX</a></li>
+                    <li><a href="">JOTUN</a></li>
+                    <li><a href="">NEROLAC</a></li>
+                    <li><a href="">ROFF</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Products</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="">INTERIOR PAINTS</a></li>
+                    <li><a href="">EXTERIOR PAINTS</a></li>
+                    <li><a href="">WATERPROOFING</a></li>
+                    <li><a href="">TEXTURE PAINTS</a></li>
+                    <li><a href="">WOOD PAINTS</a></li>
+                    <li><a href="">METAL PAINTS</a></li>
+                    <li><a href="">DIY RANGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Contact Us</h5>
+                <div>
+                    <h6 class="text-uppercase">Address</h6>
+                    <p>136 B, Karur Byepass Road,
+                        Moolappalayam,
+                        Erode - 638002.</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Contact</h6>
+                    <p>+91 99422 25677
+                        +91 70109 35545</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">E-mail</h6>
+                    <p>venkateshwarapaints3@gmail.com</p>
                 </div>
             </div>
         </div>
 
-        <div class="categories">
-            <div class="small-container">
-                
-                <h2 class="title">Featured Products</h2>
-                <div class="row">
-                    <div class="col-3">
-                        <img src="Images/9.Royal-Mattnew-600x618.jpg" >
-                        <h4>Royal Luxury Mattnew</h4>
-                        <p>$80.00</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="Images/3-Mangoes-Black-board-paint-SKU-147-scaled-300x300.jpg" >
-                        <h4>Mangoes Black Board paint</h4>
-                        <p>$60.00</p>
-                    </div>
-                    <div class="col-3">
-                        <img src="Images/1-Royal-Luxury-Emulsion-scaled-600x668.jpg" >
-                        <h4>Royal Luxury Emulsion</h4>
-                        <p>$50.00</p>
-                    </div>
+        <div class="copyright mt-5">
+            <div class="row container mx-auto">
+                <div class="col-lg-4 col-md-6 col-12 mb-2 text-nowrap">
+                    <p>© Copyright 2023.Venkateshwarapaints.com. All Rights Reserved | Privacy Policy | Terms &
+                        Conditions | Shipping Policy | Return | Refund | Cancellation Policy</p>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!---brands-->
 
-        <!--div class="brands">
-            <div class="small-container">
-                <div class="row">
-                    <div class="col-5">
-                        <img src="Images/asian-paints-vector-logo.png">
-                    </div>
-                    <div class="col-5">
-                        <img src="Images/Glidden_(paints)_logo.png">
-                    </div>
-                    <div class="col-5">
-                        <img src="Images/benjamin-moore.png">
-                    </div>
-                    <div class="col-5">
-                        <img src="Images/axalta logo.png">
-                    </div>
-                    <div class="col-5">
-                        <img src="Images/Dulux.png">
-                    </div>
-                </div>
-            </div>
-        </div-->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
 
-        <!---footer-->
-        
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Download Our App</h3>
-                        <p>Download app for android and ios mobile phone</p>
-                        <div class="app-logo">
-                            <img src="Images/play-store.png">
-                            <img src="Images/app-store.png">
-                        </div>
-                    </div>
-                    
-                    <div class="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow us</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Youtube</li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <p class="copyright">©Copyright 2023 - Sri Venkateshwara Paints | All Rights Reserved | Privacy Policy | Terms & Conditions</p>
-            </div>
-        </div>
-        <script src="script.js"></script>
 </body>
+
 </html>
