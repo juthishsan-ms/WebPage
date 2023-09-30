@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
         $email = $_POST['email'];
         $pass = $_POST['passw'];
         $phone = $_POST['mobile'];
-        $sql = "INSERT INTO register(fname, lname, mail, pass, phno) VALUES('$fname','$lname','$email','$pass', '$phone')";
+        $sql = "INSERT INTO registration(Firstname, Lastname, Email, Pass, Mobile) VALUES('$fname','$lname','$email','$pass', '$phone')";
         $query = mysqli_query($dbc, $sql);
         if ($query) {
             echo "Entry Successful";
@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
         die("Connection failed:" . mysqli_connect_error());
     }
     mysqli_close($dbc);
-}
-else{
+} else {
     echo "connection failed";
 }
 ?>
