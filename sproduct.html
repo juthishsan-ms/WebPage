@@ -11,6 +11,41 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        .small-img-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small-img-col {
+            flex-basis: 50%;
+            cursor: pointer;
+        }
+
+        .sproduct select {
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .sproduct input {
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .sproduct input:focus {
+            outline: none;
+        }
+
+        .buy-btn {
+            background: coral;
+            opacity: 1;
+            transition: 0.3s all;
+        }
+    </style>
+
 
 </head>
 
@@ -31,7 +66,7 @@
                         <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
+                        <a class="nav-link active" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -40,8 +75,7 @@
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="account.html"><i class="fa fa-user"
-                                aria-hidden="true"></i>Account</a>
+                        <a class="nav-link" href="account.html"><i class="fa fa-user" aria-hidden="true"></i>Account</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -52,93 +86,47 @@
         </div>
     </nav>
 
-    <div class="d-flex justify-content-center align-items-center">
-        <section class="form-box">
+    <section class="sproduct container my-2 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12">
+                <img class="img-fluid w-100" src="Images/1-Royal-Luxury-Emulsion-scaled-600x668.jpg" id="MainImg"
+                    alt="">
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="Images/1-Royal-Luxury-Emulsion-scaled-600x668.jpg" width="100%" class="small-img"
+                            alt="">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="Images/Royal_emulsion_back.jpg" width="100%" class="small-img" alt="">
+                    </div>
 
-            <!--Login Form-->
-            <form id="loginForm" method="post" onsubmit="return validateLoginForm()">
-                <section class="login-container" id="login">
-                    <header class="py-0">Login</header>
-                    <hr class="mx-auto">
-                    <div class="input-box">
-                        <input type="text" id="loginUsername" class="input-field" placeholder="Username or Email">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        <p class="error-message" id="loginError"></p>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" id="loginPassword" class="input-field" placeholder="Password">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                        <p class="error-message" id="passError"></p>
-                    </div>
-                    <div class="two-col">
-                        <div class="one">
-                            <input type="checkbox" id="login-check">
-                            <label for="login-check">Remember Me</label>
-                        </div>
-                        <div class="two">
-                            <label><a href="#">Forgot password?</a></label>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <button type="submit" class="submit">Sign In</button>
-                    </div>
-                    <div class="top">
-                        <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                    </div>
-                </section>
-            </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12">
+                <h6>Home / Interior Paints</h6>
+                <h2 class="py-4">ROYALE LUXURY EMULSION</h2>
+                <h3>₹570.00 – ₹10,900.00</h3>
+                <select class="my-3">
+                    <option>Select quantity</option>
+                    <option>1 LTR</option>
+                    <option>4 LTR</option>
+                    <option>10 LTR</option>
+                    <option>20 LTR</option>
+                </select>
+                <input type="number" value="1">
+                <button class="buy-btn">Add to cart</button>
+                <h4 class="mt-5 mb-5">Product Description</h4>
+                <span>Asian Paints Royale Luxury Sheen Emulsion is an exquisite emulsion paint
+                    that provides a luxurious finish and silky glowing appearance to your walls.
+                    Luxury is just a brushstroke away with Royale Luxury Emulsion.
+                    It's the only paint emulsion in India equipped with Teflon surface protector which makes it easily
+                    washable and highly durable.
+                    It is a non-toxic, lead-free, low VOC and odourless paint that protects the walls from tough stains
+                    & harmful bacteria.</span>
+            </div>
 
-            <!-- Registration form -->
-            <form id="registrationForm" method="post" action="register.php" onsubmit="return validateRegisterForm()">
-                <section class="register-container" id="register">
-                    <header class="py-0">Sign Up</header>
-                    <hr class="mx-auto">
-                    <p class="error-message" id="registerError"></p>
-                    <div class="two-forms">
-                        <div class="input-box">
-                            <input type="text" id="registerFirstName" name="finame" class="input-field"
-                                placeholder="Firstname">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="text" id="registerLastName" name="laname" class="input-field"
-                                placeholder="Lastname">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" id="registerEmail" name="email" class="input-field" placeholder="Email">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" id="registerPassword" name="passw" class="input-field"
-                            placeholder="Password">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" id="registerMobile" name="mobile" class="input-field"
-                            placeholder="Mobile No">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <div class="two-col">
-                        <div class="one">
-                            <input type="checkbox" id="register-check">
-                            <label for="register-check"> Remember Me</label>
-                        </div>
-                        <div class="two">
-                            <label><a href="#">Terms & conditions</a></label>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <input type="submit" name="submit" class="submit" value="Register">
-                    </div>
-                    <div class="top">
-                        <span>Have an account? <a href="#" onclick="login()">Login</a></span>
-                    </div>
-                </section>
-            </form>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer class="mt-5 py-5">
         <div class="row container mx-auto pt-5">
@@ -205,6 +193,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
         integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
         crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
         integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
         crossorigin="anonymous"></script>

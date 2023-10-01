@@ -12,23 +12,23 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .product img{
+        .product img {
             width: 100%;
             height: auto;
             box-sizing: border-box;
             object-fit: cover;
         }
 
-        #Featured > div:nth-child(4) > nav > ul > li.page-item.active > a{
+        #Featured>div:nth-child(4)>nav>ul>li.page-item.active>a {
             background-color: black;
         }
 
-        #Featured > div:nth-child(4) > nav > ul > li:nth-child(n):hover>a{
+        #Featured>div:nth-child(4)>nav>ul>li:nth-child(n):hover>a {
             background-color: coral;
             color: #fff;
         }
 
-        .pagination a{
+        .pagination a {
             color: #000;
         }
     </style>
@@ -53,20 +53,20 @@
                         <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Products</a>
+                        <a class="nav-link active" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="account.html"><i class="fa fa-user" aria-hidden="true"></i>Account</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa fa-search" aria-hidden="true"></i>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                     </li>
 
             </div>
@@ -80,7 +80,7 @@
             <p>Here you can check our new products with fair price</p>
         </div>
         <div class="row mx-auto container">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
+            <div onclick="window.location.href='sproduct.html';" class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt="">
                 <h5 class="p-name">Royale Luxury Emulsion</h5>
                 <h4 class="p-price">₹570.00 - ₹10,900.00</h4>

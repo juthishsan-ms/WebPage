@@ -279,16 +279,6 @@ footer p {
 
 /*----account page----*/
 
-.header {
-    background: lightskyblue;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .form-box {
     position: relative;
     display: flex;
@@ -348,7 +338,7 @@ header {
 
 .input-field {
     font-size: 15px;
-    background: #fff;
+    background: lightcoral;
     color: #000000;
     height: 50px;
     width: 100%;
@@ -361,7 +351,7 @@ header {
 
 .input-field:hover,
 .input-field:focus {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(245, 178, 178, 0.7);
 }
 
 ::-webkit-input-placeholder {
@@ -389,13 +379,13 @@ header {
     border: none;
     border-radius: 30px;
     outline: none;
-    background: #fff;
+    background: lightcoral;
     cursor: pointer;
     transition: .3s ease-in-out;
 }
 
 .submit:hover {
-    background: skyblue;
+    background: rgba(245, 178, 178, 0.7);
     box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -443,9 +433,110 @@ header {
     }
 }
 
-/*----error----*/
+/*-----error-----*/
 .error-message {
     color: red;
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 16px;
+}
+
+/*-----Cart-----*/
+
+#cart-container {
+    overflow-x: auto;
+}
+
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart-container table thead {
+    font-weight: 700;
+}
+
+#cart-container table thead td {
+    background: coral;
+    color: #fff;
+    border: none;
+    padding: 6px 0;
+}
+
+#cart-container table td {
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+
+#cart-container table td:nth-child(1) {
+    width: 100px;
+}
+
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3) {
+    width: 200px;
+}
+
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6) {
+    width: 170px;
+}
+
+#cart-container table tbody img {
+    width: 1oopx;
+    height: 80px;
+    object-fit: cover;
+}
+
+#cart-container table tbody i {
+    color: #000;
+}
+
+#cart-bottom .coupon>div,
+#cart-bottom .total>div {
+    border: 1px solid #b6b3b3;
+}
+
+#cart-bottom .coupon h5,
+#cart-bottom .total h5 {
+    background: coral;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+#cart-bottom .coupon p,
+#cart-bottom .coupon input {
+    padding: 0 12px;
+}
+
+#cart-bottom .coupon input {
+    height: 44px;
+}
+
+#cart-bottom .coupon input,
+#cart-bottom .coupon button {
+    margin: 0 0 20px 12px;
+}
+
+#cart-bottom .total div>div {
+    padding: 0 12px;
+}
+
+#cart-bottom .total h6 {
+    color: #000;
+}
+
+.second-hr {
+    background-color: #b8b7b3;
+    width: 100%;
+    height: 1px;
+}
+
+#cart-bottom .total div>button {
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
 }
