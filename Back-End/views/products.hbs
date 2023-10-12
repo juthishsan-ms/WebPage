@@ -11,6 +11,29 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="/Css/style.css">
 
+    <style>
+        .product img {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            object-fit: cover;
+        }
+
+        #Featured>div:nth-child(4)>nav>ul>li.page-item.active>a {
+            background-color: black;
+        }
+
+        #Featured>div:nth-child(4)>nav>ul>li:nth-child(n):hover>a {
+            background-color: coral;
+            color: #fff;
+        }
+
+        .pagination a {
+            color: #000;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -27,10 +50,10 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="home.html">Home</a>
+                        <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
+                        <a class="nav-link active" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -50,59 +73,14 @@
         </div>
     </nav>
 
-    <section id="home">
-        <div class="container">
-            <h2> <span>Welcome to Sri Venkateshwara Paints</span> <br> Your Online Paint Store</h2>
-            <p>Get your favorite paint delivered to your doorstep.</p>
-            <button>Explore Now</button>
-        </div>
-    </section>
-
-    <!--section id="brand" class="container">
-        <div class="row m-0 py-5">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
-            <img class="img-fluid col-lg-2 col-md-4 col-6" src="Images/asian-paints-logo-free-png.webp" alt="">
-        </div>
-    </section-->
-
-    <section id="new" class="w-100">
-        <div class="row p-0 m-0">
-            <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="Images/interior.png" alt="">
-                <div class="details">
-                    <h2>Interior Paints</h2>
-                    <button class="text-uppercase" onclick="window.location.href='products.html';">Shop now</button>
-                </div>
-            </div>
-            <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="Images/exterior.png" alt="">
-                <div class="details">
-                    <h2>Exterior Paints</h2>
-                    <button class="text-uppercase">Shop now</button>
-                </div>
-            </div>
-            <div class="one col-lg-4 col-md-12 col-12 p-0">
-                <img class="img-fluid" src="Images/Wood.png" alt="">
-                <div class="details">
-                    <h2>Wood Paints</h2>
-                    <button class="text-uppercase">Shop now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="Featured" class="my-5 pb-5">
-        <div class="container text-center mt-5 py-5">
-            <h3>Our Featured Products</h3>
-            <hr class="mx-auto">
+    <section id="Featured" class="my-5 py-5">
+        <div class="container mt-5 py-5">
+            <h2 class="font-weight-bold">Our Featured Products</h2>
+            <hr>
             <p>Here you can check our new products with fair price</p>
         </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
+        <div class="row mx-auto container">
+            <div onclick="window.location.href='sproduct.html';" class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt="">
                 <h5 class="p-name">Royale Luxury Emulsion</h5>
                 <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
@@ -127,69 +105,72 @@
                 <button class="buy-btn">Buy Now</button>
             </div>
         </div>
-
-        <div class="container text-center mt-5 py-5">
-            <h3>Featured Interior Paints</h3>
-            <hr class="mx-auto">
-            <p>Best Selling Interior Paints</p>
-        </div>
-        <div class="row mx-auto container-fluid">
+        <div class="row mx-auto container">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/3-Mangoes-Aluminium-Paint-SKU-148-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Mangoes Aluminium Paint</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/3-Mangoes-Black-board-paint-SKU-147-scaled-300x300.jpg" alt="">
+                <h5 class="p-name">Tractor Emulsion</h5>
+                <h4 class="p-price">₹150.00 - ₹2,266.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
             <div class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="Images/berger-silk-glamour-paint.1jpg-300x300.jpg" alt="">
-                <h5 class="p-name">Berger Silk Glamor</h5>
-                <h4 class="p-price">₹788.00 - ₹7,500.00</h4>
+                <h5 class="p-name">Apcolite Premium Emulsion</h5>
+                <h4 class="p-price">₹331.00 - ₹6,161.00</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
             <div class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="Images/Bison-Acrylic-Distemper-300x300.jpg" alt="">
-                <h5 class="p-name">Berger Bison Acrylic Distemper</h5>
-                <h4 class="p-price">₹168.00 - ₹1,523.00</h4>
+                <h5 class="p-name">Aquatech Flexible Waterproof</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="row mx-auto container">
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/bison-acrylic-emulsion-300x300.jpg" alt="">
+                <h5 class="p-name">Royale Luxury Emulsion</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/DSCF3097-300x300.jpg" alt="">
+                <h5 class="p-name">Tractor Emulsion</h5>
+                <h4 class="p-price">₹150.00 - ₹2,266.00</h4>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="product text-center col-lg-3 col-md-4 col-12">
+                <img class="img-fluid mb-3" src="Images/DSCF3148-1-300x300.jpg" alt="">
+                <h5 class="p-name">Apcolite Premium Emulsion</h5>
+                <h4 class="p-price">₹331.00 - ₹6,161.00</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
             <div class="product text-center col-lg-3 col-md-4 col-12">
                 <img class="img-fluid mb-3" src="Images/silk-breathe-easy--300x300.jpg" alt="">
-                <h5 class="p-name">Berger Silk BreatheEasy</h5>
-                <h4 class="p-price">₹578.00 - ₹5,670.00</h4>
+                <h5 class="p-name">Aquatech Flexible Waterproof</h5>
+                <h4 class="p-price">₹570.00 - ₹10,900.00</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Images/bison-acrylic-emulsion-300x300.jpg" alt="">
-                <h5 class="p-name">Bison Acrylic Interior Emulsion</h5>
-                <h4 class="p-price">₹210.00 - ₹3,780.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-
-        <div class="container text-center mt-5 py-5">
-            <h3>Featured Exterior Paints</h3>
-            <hr class="mx-auto">
-            <p>Best Selling Exterior Paints</p>
-        </div>
-        <div class="row mx-auto container-fluid">
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Images/21.ACE-Exterior-Emulsionnew-600x618.jpg" alt="">
-                <h5 class="p-name">ACE</h5>
-                <h4 class="p-price">₹206.00 – ₹3,597.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Images/3.-Apex-Exterior-Emulsion-600x668.jpg" alt="">
-                <h5 class="p-name">Apex</h5>
-                <h4 class="p-price">₹347.00 - ₹6,050.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Images/20.Apex-Floor-Guard-new-600x618.jpg" alt="">
-                <h5 class="p-name">APEX FLOOR GUARD</h5>
-                <h4 class="p-price">₹450.00 - ₹1,716.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product text-center col-lg-3 col-md-4 col-12">
-                <img class="img-fluid mb-3" src="Images/5.Apex-Ultima-Protek-Basecoatnew-600x618.jpg" alt="">
-                <h5 class="p-name">Apex Ultima Protek Basecoat</h5>
-                <h4 class="p-price">₹412.00 - ₹4,246.00</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+            <nav aria-label="...">
+                <ul class="pagination mt-5">
+                    <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
     </section>
@@ -255,8 +236,7 @@
         </div>
     </footer>
 
-
-    <!--script src="/javascripts/script.js"></script-->
+    <script src="/Scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
         integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
         crossorigin="anonymous"></script>
