@@ -1,21 +1,33 @@
-var mysql = require('mysql');
+const express = require("express");
+const mysql = require('mysql');
+const doenv = require("dotenv");
+const path = require('path');
+const hbs = require('hbs');
+const app = express();
 
-var conn = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "123456789",
-    database: "paintstore_db"
+doenv.config({
+    path:'./login.env',
+})
+
+const conn = mysql.createConnection({
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASS,
+    database: process.env.DATABASE,
 });
 
 conn.connect(function (err) {
     if (err) throw err;
     console.log("Connection successful");
-    var sql="INSERT INTO registration (Firstname,Lastname,Email,Password,Phno) VALUES ?";
-    var values=[
-        ['Juthishsan','M S','juthishsanms.21bcr@kongu.edu','juthish123','9965929856']
-    ]
-    conn.query(sql,[values],function(err,result){
-        if(err) throw err;
-        console.log("records Inserted: "+result.affectedRows)
-    })
+    
 });
+
+app.use(express.static(path.join(__dirname, '..', 'Front-End')));
+app.set("view engine","hbs");
+
+app.use('/', require("./routes/pages"));
+app.use('/auth', require("./routes/auth"));
+
+app.listen(5000,()=>{
+    console.log("Server running in port 5000");
+})

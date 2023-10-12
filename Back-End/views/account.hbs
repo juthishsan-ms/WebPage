@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Venkateshwara | Ecommerce Website</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <img src="Images/SVP logo 2.png" alt="logo" width="200px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i id="bar" class="fa fa-bars" aria-hidden="true"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="account.html"><i class="fa fa-user"
+                                aria-hidden="true"></i>Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    </li>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <section class="form-box">
+
+            <!--Login Form-->
+            <form id="loginForm" method="post" action="" onsubmit="return validateLoginForm()">
+                <section class="login-container" id="login">
+                    <header class="py-0">Login</header>
+                    <hr class="mx-auto">
+                    <div class="input-box">
+                        <input type="text" id="loginUsername"  class="input-field" placeholder="Username or Email">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p class="error-message" id="loginError"></p>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="loginPassword" class="input-field" placeholder="Password">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <p class="error-message" id="passError"></p>
+                    </div>
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="login-check">
+                            <label for="login-check">Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Forgot password?</a></label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <button type="submit" class="submit">Sign In</button>
+                    </div>
+                    <div class="top">
+                        <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                    </div>
+                </section>
+            </form>
+
+            <!-- Registration form -->
+            <form id="registrationForm" method="post" action="/auth/account" onsubmit="return validateRegisterForm()">
+                <section class="register-container" id="register">
+                    <header class="py-0">Sign Up</header>
+                    <hr class="mx-auto">
+                    <p class="error-message" id="registerError"></p>
+                    <div class="two-forms">
+                        <div class="input-box">
+                            <input type="text" id="registerFirstName" name="fname" class="input-field"
+                                placeholder="Firstname">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="registerLastName" name="lname" class="input-field"
+                                placeholder="Lastname">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="registerEmail" name="email" class="input-field" placeholder="Email">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="registerPassword" name="pass" class="input-field"
+                            placeholder="Password">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="registerMobile" name="mobile" class="input-field"
+                            placeholder="Mobile No">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="register-check">
+                            <label for="register-check"> Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Terms & conditions</a></label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <button type="submit">Register</button>
+                    </div>
+                    <div class="top">
+                        <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                    </div>
+                </section>
+            </form>
+        </section>
+    </div>
+
+    <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <img src="Images/logo-removebg-preview.png" alt="" width="60px">
+                <p class="pt-3">We are Sri Venkateshwara paints. We are selling the best quality paints all over
+                    tamilnadu. We have various paint collections.</p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Brands</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="">ASIAN</a></li>
+                    <li><a href="">BERGER</a></li>
+                    <li><a href="">DR.FIXIT</a></li>
+                    <li><a href="">DULUX</a></li>
+                    <li><a href="">JOTUN</a></li>
+                    <li><a href="">NEROLAC</a></li>
+                    <li><a href="">ROFF</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Products</h5>
+                <ul class="text-uppercase list-unstyled">
+                    <li><a href="">INTERIOR PAINTS</a></li>
+                    <li><a href="">EXTERIOR PAINTS</a></li>
+                    <li><a href="">WATERPROOFING</a></li>
+                    <li><a href="">TEXTURE PAINTS</a></li>
+                    <li><a href="">WOOD PAINTS</a></li>
+                    <li><a href="">METAL PAINTS</a></li>
+                    <li><a href="">DIY RANGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Contact Us</h5>
+                <div>
+                    <h6 class="text-uppercase">Address</h6>
+                    <p>136 B, Karur Byepass Road,
+                        Moolappalayam,
+                        Erode - 638002.</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Contact</h6>
+                    <p>+91 99422 25677
+                        +91 70109 35545</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">E-mail</h6>
+                    <p>venkateshwarapaints3@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright mt-5">
+            <div class="row container mx-auto">
+                <div class="col-lg-4 col-md-6 col-12 mb-2 text-nowrap">
+                    <p>© Copyright 2023.Venkateshwarapaints.com. All Rights Reserved | Privacy Policy | Terms &
+                        Conditions | Shipping Policy | Return | Refund | Cancellation Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+        <script src="E:\PROJECT\Web Page\Back-End\connectivity.js"></script>
+
+</body>
+
+</html>

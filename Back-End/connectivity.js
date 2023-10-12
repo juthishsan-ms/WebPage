@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
-const port = 8000;
+const port = 3000;
 var mysql = require('mysql');
 
 app.use(express.static(path.join(__dirname, '..', 'Front-End')));
@@ -21,10 +21,10 @@ conn.connect(function (err) {
     console.log("connection successful");
 })
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     const filePath = path.join(__dirname, '..', 'Front-End', 'account.html');
     res.sendFile(filePath);
-});
+});*/
 
 app.post('/', (req, res) => {
     console.log(req.body);
@@ -39,5 +39,28 @@ app.post('/', (req, res) => {
         conn.end();
     });
 });
+
+app.post('/', (req, res) => {
+    const email = req.body.email;
+    const password = req.body.pass;
+
+    const sql = "SELECT * FROM registration WHERE email = ? AND password = ?";
+    const values = [email, password];
+
+    conn.query(sql, values, (err,results)=>{
+        if(err){
+            console.log(err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+
+        if(results.length>0){
+            const filePath = path.join(__dirname, '..', 'Front-End', 'home.html');
+            res.redirect(filePath);
+        } else {
+            res.status(401).send('Authentication failed');
+        }
+    })
+})
 
 app.listen(port, () => console.log(`Express api listening on port ${port}`));

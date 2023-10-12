@@ -56,12 +56,12 @@
         <section class="form-box">
 
             <!--Login Form-->
-            <form id="loginForm" method="post" onsubmit="return validateLoginForm()">
+            <form id="loginForm" method="post" action="http://127.0.0.1:3000/home.html" onsubmit="return validateLoginForm()">
                 <section class="login-container" id="login">
                     <header class="py-0">Login</header>
                     <hr class="mx-auto">
                     <div class="input-box">
-                        <input type="text" id="loginUsername" class="input-field" placeholder="Username or Email">
+                        <input type="text" id="loginUsername"  class="input-field" placeholder="Username or Email">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <p class="error-message" id="loginError"></p>
                     </div>
@@ -89,7 +89,7 @@
             </form>
 
             <!-- Registration form -->
-            <form id="registrationForm" method="post" action="http://127.0.0.1:8000/" onsubmit="return validateRegisterForm()">
+            <form id="registrationForm" method="post" action="http://127.0.0.1:3000/" onsubmit="return validateRegisterForm()">
                 <section class="register-container" id="register">
                     <header class="py-0">Sign Up</header>
                     <hr class="mx-auto">
