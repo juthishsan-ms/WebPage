@@ -292,7 +292,7 @@ footer p {
 
 .login-container {
     position: relative;
-    left: 250px;
+    
     height: 500px;
     width: 500px;
     display: flex;
@@ -302,7 +302,7 @@ footer p {
 
 .register-container {
     position: relative;
-    right: -520px;
+    
     height: 600px;
     width: 500px;
     display: flex;
