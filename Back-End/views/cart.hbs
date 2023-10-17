@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Css/style.css">
 
 </head>
 
@@ -27,7 +27,7 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="home.html">Home</a>
+                        <a class="nav-link " href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="products.html">Products</a>
@@ -42,78 +42,108 @@
                         <a class="nav-link" href="account.html">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <i class="fa fa-search" aria-hidden="true">  Search</i>
+                        <a href="cart.html"><i class="fa fa-shopping-cart active" aria-hidden="true">  Cart</i></a>
                     </li>
             </div>
         </div>
     </nav>
 
-    <div class="d-flex justify-content-center align-items-center">
-        <section class="form-box">
+    <section class="pt-5 mt-5 container">
+        <h2 class="font-weight-bold pt-5">Shopping Cart</h2>
+        <hr>
+    </section>
 
-            <form id="registrationForm" method="post" action="http://127.0.0.1:3000/"
-                onsubmit="return validateRegisterForm()">
-                <section class="register-container" id="register">
-                    <header class="py-0">Sign Up</header>
-                    <hr class="mx-auto">
-                    <p class="error-message" id="registerError"></p>
-                    <div class="two-forms">
-                        <div class="input-box">
-                            <input type="text" id="registerFirstName" name="fname" class="input-field"
-                                placeholder="Firstname">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="text" id="registerLastName" name="lname" class="input-field"
-                                placeholder="Lastname">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </div>
+    <section id="cart-container" class="container my-5">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Product Image</td>
+                    <td>Product Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><img src="Images/1-Royal-Luxury-Emulsion-scaled-300x300.jpg" alt=""></td>
+                    <td>
+                        <h5>Royal Luxury Emulsion</h5>
+                    </td>
+                    <td>
+                        <h5>₹570.00</h5>
+                    </td>
+                    <td><input class="w-25 pl-1" value="1" type="number"></td>
+                    <td>
+                        <h5>₹570.00</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><img src="Images/2-.-Tractor-Emulsionnew-300x300.jpg" alt=""></td>
+                    <td>
+                        <h5>Tractor Emulsion</h5>
+                    </td>
+                    <td>
+                        <h5>₹840.00</h5>
+                    </td>
+                    <td><input class="w-25 pl-1" value="1" type="number"></td>
+                    <td>
+                        <h5>₹840.00</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><img src="Images/3-Mangoes-Aluminium-Paint-SKU-148-scaled-300x300.jpg" alt=""></td>
+                    <td>
+                        <h5>Mangoesaluminium paint</h5>
+                    </td>
+                    <td>
+                        <h5>₹520.00</h5>
+                    </td>
+                    <td><input class="w-25 pl-1" value="1" type="number"></td>
+                    <td>
+                        <h5>₹520.00</h5>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-bottom" class="container">
+        <div class="row">
+            <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+                <div>
+                    <h5>Coupon</h5>
+                    <p>Enter your coupon code</p>
+                    <input type="text" placeholder="Coupon code">
+                    <button>Apply Coupon</button>
+                </div>
+            </div>
+            <div class="total col-lg-6 col-md-6 col-12">
+                <div>
+                    <h5>Cart Total</h5>
+                    <div class="d-flex justify-content-between">
+                        <h6>Subtotal</h6>
+                        <p>₹570.00</p>
                     </div>
-                    <div class="input-box">
-                        <input type="text" id="registerEmail" name="email" class="input-field" placeholder="Email">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="d-flex justify-content-between">
+                        <h6>Shipping</h6>
+                        <p>₹570.00</p>
                     </div>
-                    <div class="input-box">
-                        <input type="password" id="registerPassword" name="pass" class="input-field"
-                            placeholder="Password">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    <hr class="second-hr">
+                    <div class="d-flex justify-content-between">
+                        <h6>Total</h6>
+                        <p>₹570.00</p>
                     </div>
-                    <div class="input-box">
-                        <input type="password" id="registerPassword" name="cpass" class="input-field"
-                            placeholder="Confirm Password">
-                        <i class="fa fa-lock" aria-hidden="true"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" id="registerMobile" name="mobile" class="input-field"
-                            placeholder="Mobile No">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <div class="two-col">
-                        <div class="one">
-                            <input type="checkbox" id="register-check">
-                            <label for="register-check"> Remember Me</label>
-                        </div>
-                        <div class="two">
-                            <label><a href="#">Terms & conditions</a></label>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <input type="submit" name="submit" class="submit" value="Register">
-                    </div>
-                    <div class="top">
-                        <span>Have an account? <a href="login.html" onclick="login()">Login</a></span>
-                    </div>
-                </section>
-            </form>
-        </section>
-    </div>
+                    <button class="ml-auto">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="mt-5 py-5">
         <div class="row container mx-auto pt-5">
@@ -183,7 +213,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
         integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
         crossorigin="anonymous"></script>
-    <script src="E:\PROJECT\Web Page\Back-End\connectivity.js"></script>
 
 </body>
 

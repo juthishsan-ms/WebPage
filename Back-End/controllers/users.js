@@ -14,15 +14,15 @@ exports.login = async (req, res) => {
     try {
         const { email, pass } = req.body;
         if (!email || !pass) {
-            return res.status(400).render("account", { msg: "Please enter your Email or password", msg_type: "error" });
+            return res.status(400).render("login", { msg: "Please Enter Your Email or Password", msg_type: "error" });
         }
         conn.query('select * from registration where Email=?', [email], async (error, result) => {
             console.log(result);
             if (result.length <= 0) {
-                return res.status(401).render("account", { msg: "Please enter your Email or password", msg_type: "error" });
+                return res.status(401).render("login", { msg: "Please Enter Your Email or Password", msg_type: "error" });
             } else {
                 if (!(await bcrypt.compare(pass, result[0].Password))) {
-                    return res.status(401).render("account", { msg: "Email or password is incorrect", msg_type: "error" });
+                    return res.status(401).render("login", { msg: "Email or Password is incorrect", msg_type: "error" });
                 } else {
                     const id = result[0].ID;
                     const token = jwt.sign({ id: id }, process.env.JWT_SECRET, {
@@ -32,8 +32,8 @@ exports.login = async (req, res) => {
                     const cookieOptions = {
                         expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000), httpOnly: true,
                     }
-                    res.cookie("Juthi", token, cookieOptions);
-                    res.status(200).redirect("/");
+                    res.cookie("Juthishan", token, cookieOptions);
+                    res.status(200).redirect("/home.html");
                 }
             }
         })
@@ -43,7 +43,7 @@ exports.login = async (req, res) => {
 
 }
 
-exports.account = (req, res) => {
+exports.register = (req, res) => {
     console.log(req.body);
 
     /*res.send("Form submitted");
@@ -62,9 +62,9 @@ exports.account = (req, res) => {
             if (error) throw error;
 
             if (result.length > 0) {
-                return res.render("account", { msg: "Already registered", msg_type: "error" });
+                return res.render("register", { msg: "You have already registered. Please Login", msg_type: "error" });
             } else if (pass !== cpass) {
-                return res.render("account", { msg: "Password does not match", msg_type: "error" });
+                return res.render("register", { msg: "Password does not match", msg_type: "error" });
             }
             let hashedPassword = await bcrypt.hash(pass, 8);
             //console.log(hashedPassword);
@@ -74,7 +74,7 @@ exports.account = (req, res) => {
                     throw err;
                 else {
                     console.log(result);
-                    return res.render("account", { msg: "Registration Successfull", msg_type: "good" });
+                    return res.render("register", { msg: "Registration Successful. Please Login", msg_type: "good" });
                 }
             });
         }
@@ -84,9 +84,9 @@ exports.account = (req, res) => {
 exports.isLoggedIn = async (req, res, next) => {
     //req.name="Check Login";
     //console.log(req.cookies);
-    if (req.cookies.Juthi) {
+    if (req.cookies.Juthishan) {
         try {
-            const decode = await promisify(jwt.verify)(req.cookies.Juthi, process.env.JWT_SECRET);
+            const decode = await promisify(jwt.verify)(req.cookies.Juthishan, process.env.JWT_SECRET);
             //console.log(decode);
             conn.query("select * from registration where ID=?", [decode.id], (err, results) => {
                 //console.log(results);
@@ -104,4 +104,12 @@ exports.isLoggedIn = async (req, res, next) => {
     } else {
         next();
     }
+}
+
+exports.logout = async (req, res) => {
+    res.cookie("Juthishan", "logout", {
+        expires: new Date(Date.now() + 2 * 1000),
+        httpOnly: true,
+    })
+    res.status(200).redirect("/home.html");
 }

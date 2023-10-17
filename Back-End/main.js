@@ -22,15 +22,16 @@ app.use(express.urlencoded({ extended: false }));
 
 conn.connect(function (err) {
     if (err) throw err;
-    console.log("Connection successful");
+    console.log("Database Connection successful");
     
 });
 
 const location = path.join(__dirname, "./public");
 app.use(express.static(location));
-
-//app.use(express.static(path.join(__dirname, '..', 'Front-End')));
 app.set("view engine","hbs");
+
+/*const partialsPath = path.join(__dirname, "./views/partials");
+hbs.registerPartials(partialsPath);*/
 
 app.use('/', require("./routes/pages"));
 app.use('/auth', require("./routes/auth"));
